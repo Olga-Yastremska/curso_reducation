@@ -45,7 +45,9 @@ const discount = Math.round(Math.random()*99); // знижка від 0 до 99
 console.log(`Випадкова знижка: ${discount}%`);
 
 
-const specialDiscountPrice = ((totalPrice) * (discount/100)).toFixed(2);
-console.log('Ціна зі знижкою: ' + specialDiscountPrice);
+const specialDiscountPrice = ((totalPrice) - (discount/100*100)).toFixed(2);
+
 console.log(`Прибуток: ${(((totalPrice)/2)-(specialDiscountPrice)).toFixed(2)}`);
+
+
 
