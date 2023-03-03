@@ -9,8 +9,9 @@ console.log("Апельсин : " + orangePrice);
 
 const totalPrice = applePrice + melonPrice + orangePrice;
 
-
+const maxPrice = Math.max(applePrice, melonPrice, orangePrice);
 console. log ("Максимальна ціна : " + (Math.max(applePrice, melonPrice, orangePrice)));
+const minPrice = Math.min(applePrice, melonPrice, orangePrice);
 console. log ("Мінімальна ціна : " + (Math.min(applePrice, melonPrice, orangePrice)));
 console. log ("Загальна вартість :" + totalPrice);
 
@@ -50,4 +51,10 @@ const specialDiscountPrice = ((totalPrice) - (discount/100*100)).toFixed(2);
 console.log(`Прибуток: ${(((totalPrice)/2)-(specialDiscountPrice)).toFixed(2)}`);
 
 
-
+//Advanced
+console.log("Всі обчислення : Максимальна ціна : " + maxPrice + ", Мінімальна ціна : " + minPrice + 
+", Загальна вартість :" + totalPrice + ", Загальна вартість товарів (усіх) без копійок : " + totalPriceWihoutCoins + 
+", Загальна вартість з округленням до сотень : " + totalHundredRoundedPrice + 
+", Сума решти при оплаті 500 грн : " + restOfPayment + ", Середнє значення ціни без округленням до 2-х знаків : " + averageValue + 
+", Середнє значення ціни з округленням до 2-х знаків : " + averageValue.toFixed(2) + `, Випадкова знижка: ${discount}%` +
+ ', Ціна зі знижкою: ' + specialDiscountPrice + `Прибуток: ${(((totalPrice)/2)-(specialDiscountPrice)).toFixed(2)}`);
