@@ -5,7 +5,7 @@ if (N % 1 == 0) { //перевірка чи ціле число
 else {
 console.log("Не ціле число");
 }
-/* console.log(typeof N); */
+
 let M = +prompt('Введіть число ');
 console.log("друге число M: " + M);
 if (M % 1 == 0) { //перевірка чи ціле число
@@ -13,18 +13,14 @@ if (M % 1 == 0) { //перевірка чи ціле число
 else {
 console.log("Не ціле число");
 }
-/* console.log(typeof M); */
+
 for (let i = N; i <= M; i++) {
-/*   console.log(i); */
-   if (i % 2 == 0) {
-   // console.log("true ");  //Парні числа потрібно пропускати Тру
-  } else {
- // console.log("False ");  //Не парні числа потрібно пропускати Фолс
+
+   if (i % 2 == 0) {//Парні числа потрібно пропускати Тру
+  } else { //Не парні числа потрібно пропускати Фолс
 } 
 }
-const result = confirm("Чи потрібно пропускати парні числа?") // true - так false - ні
-
-
+const result = confirm("Чи потрібно пропускати парні числа?") // true - так, false - ні
 console.log(result);
 
 
@@ -40,6 +36,7 @@ else  {
 }
 
 console.log(sum);
+alert(sum);
 
 
 
