@@ -46,7 +46,8 @@ const marksStudents = (students,marks) => {
 return stMarks;
 }
 const studentsMarks = marksStudents(students,marks);
-console.log(studentsMarks);
+console.log(marksStudents(students, marks));
+
 
 // Рандомна оцінка студентам за тему
 const randomRating = (themeStudents) => {
@@ -57,10 +58,13 @@ const randomRating = (themeStudents) => {
     return marksTheme;
 }
 const randRating = randomRating(boyAndGirl,themes,marks);
-console.log(randRating);
+const randomMarksPairs = randomRating(themeForPairs(boyAndGirl,themes));
+
+console.log(randomRating(themeForPairs(boyAndGirl,themes)));
+/* console.log(randRating); */
 
 
 document.writeln(`<h1>Пари студентів - Хлопчик, дівчинка </h1> ${boyAndGirl.join("<br>") }`);
 document.writeln(`<h1>Теми для пар студентів <h1/> ${studentsThemes.join("<br>")}`);
 document.writeln(`<h1>Оцінки студентів </h1> ${studentsMarks.join("<br>")}`);
-document.writeln(`<h1>Рандомна оцінка студентам за тему </h1> ${randRating.join("<br>")}`);
+document.writeln(`<h1>Рандомна оцінка студентам за тему </h1> ${randomMarksPairs.join("<br>")}`);
