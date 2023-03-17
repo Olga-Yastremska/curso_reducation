@@ -14,6 +14,7 @@ const students = [
  ];
  const marks = [4, 5, 5, 3, 4, 5];
  
+
 //Пари студентів - Хлопчик, дівчинка
 const studentsPairs = (stud) => {
     const boyAndGirl = new Array(new Array(), new Array(), new Array(),);
@@ -24,6 +25,7 @@ const studentsPairs = (stud) => {
 }
  const boyAndGirl = studentsPairs(students);
 console.log(boyAndGirl)
+
 
 // Теми для пар студентів
 const themeForPairs = (students,themes) => {
@@ -36,6 +38,7 @@ const themeForPairs = (students,themes) => {
 const studentsThemes = themeForPairs(boyAndGirl,themes);
 console.log(studentsThemes)
 
+
 // Оцінки студентів
 const marksStudents = (students,marks) => { 
     const stMarks = [];
@@ -47,6 +50,7 @@ return stMarks;
 }
 const studentsMarks = marksStudents(students,marks);
 console.log(studentsMarks);
+
 
 // Рандомна оцінка студентам за тему
 const randomRating = (themeStudents) => {
