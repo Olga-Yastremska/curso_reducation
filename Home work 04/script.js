@@ -13,7 +13,6 @@ const students = [
     "Алгоритми і структури даних"
  ];
  const marks = [4, 5, 5, 3, 4, 5];
-
  
 //Пари студентів - Хлопчик, дівчинка
 const studentsPairs = (stud) => {
@@ -25,7 +24,6 @@ const studentsPairs = (stud) => {
 }
  const boyAndGirl = studentsPairs(students);
 console.log(boyAndGirl)
- 
 
 // Теми для пар студентів
 const themeForPairs = (students,themes) => {
@@ -38,22 +36,17 @@ const themeForPairs = (students,themes) => {
 const studentsThemes = themeForPairs(boyAndGirl,themes);
 console.log(studentsThemes)
 
-
 // Оцінки студентів
-const studentsMarks = (stud, marks) => {
-    const RatingStud = [];
-    for (let i=0; i<stud.length; i++)
-        RatingStud[i] = new Array();
+const marksStudents = (students,marks) => { 
+    const stMarks = [];
+    for (let i=0; i < students.length; i++){
 
-    for (let i=0; i<stud.length; i++) {
-        RatingStud[i].push(marks[i]);
-        RatingStud[i].unshift(stud[i]);
+        stMarks.push([students[i], parseInt(marks[i])]);
     }
-    return RatingStud;
+return stMarks;
 }
-const studentsRating = studentsMarks(boyAndGirl,themes);
-console.log(studentsRating);
-
+const studentsMarks = marksStudents(students,marks);
+console.log(studentsMarks);
 
 // Рандомна оцінка студентам за тему
 const randomRating = (themeStudents) => {
@@ -63,6 +56,6 @@ const randomRating = (themeStudents) => {
     }
     return marksTheme;
 }
-const randRating = randomRating(boyAndGirl,themes);
+const randRating = randomRating(boyAndGirl,themes,marks);
 console.log(randRating);
 
