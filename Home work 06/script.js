@@ -30,7 +30,7 @@ const students = [{
             subjectslist[i] = item[0].toUpperCase() + item.slice(1);
             subjectslist[i] = subjectslist[i].split('');
             subjectslist[i].forEach((char, j) => {
-                if (char == '_' || char == '-' ) subjectslist[i][j] = ' ';
+                if (char == '_' || char == '-' ) subjectslist[i][j] = '-';
             });
             subjectslist[i] = subjectslist[i].join('');
         });
